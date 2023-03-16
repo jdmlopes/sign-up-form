@@ -1,3 +1,11 @@
+:root{
+    --font-color: rgb(32, 32, 32);
+    --bg-color: rgb(247, 247, 247);
+    --form-bg-color: white;
+    --padding-left: 35px;
+    --button-color: rgb(163, 151, 40);
+}
+
 @font-face{
     font-family: "Norse-Bold";
     src: url("./fonts/Norse-Bold.otf");
@@ -49,10 +57,9 @@
     font-family: "Norse-Bold";
 }
 
-
-
 #picture-credits{
     justify-self: flex-end;
+    font-size: 12px;
 }
 
 #picture-credits a{
@@ -62,4 +69,81 @@
 #form-container{
     flex-shrink: 0;
     width: max(60vw, 420px);
+    color: var(--font-color);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 25px;
+    background-color: var(--bg-color);
 }
+
+#form-container .title-text{
+    font-size: 26px;
+    font-weight: bold;
+    padding-right: 60px;
+}
+
+#form-container p,
+#form-inputs{
+    padding-left: var(--padding-left);
+}
+
+#form-container button{
+    margin-left: var(--padding-left);
+}
+
+#form-container form legend{
+    font-size: 26px;
+    font-weight: bold;
+}
+
+#form-inputs{
+    background-color: var(--form-bg-color);
+    padding-top: 25px;
+    padding-bottom: 40px;
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    box-shadow: 0 4px 15px -15px black;
+}
+
+#form-inputs .row{
+    display: flex;
+    gap: 60px;
+}
+
+#form-inputs .row-item{
+    display: flex;
+    flex-direction: column;
+
+}
+
+#form-inputs .row-item label{
+    font-size: 13px;
+    font-weight: bold;
+    letter-spacing: 3px;
+}
+
+#form-inputs input{
+    font-size: 16px;
+    width: 275px;
+    height: 25px;
+    padding-left: 2px;
+}
+
+button{
+    font-size: 18px;
+    font-weight: bold;
+    color: white;
+    background-color: var(--button-color);
+    padding: 15px 35px;
+    border-radius: 5px;
+    border-style: none;
+}
+
+#form-container a{
+    color: var(--button-color);
+    font-weight: bold;
+}
+
