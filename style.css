@@ -1,6 +1,12 @@
+@font-face{
+    font-family: "Norse-Bold";
+    src: url("./fonts/Norse-Bold.otf");
+}
+
 *{
     margin: 0px;
     padding: 0px;
+    font-family: Helvetica, Arial, sans-serif;
 }
 
 #content{
@@ -18,27 +24,39 @@
     align-items: center;
     justify-content: space-between;
     padding-top: 20vh;
+    padding-bottom: 10px;
     flex: 0 0 auto;
     color: white;
 }
 
 #logo{
-    background-color: rgba(0, 0, 0, 0.6);
+    background-color: rgba(0, 0, 0, 0.5);
     width: 100%;
     display: flex;
     align-items: center;
     justify-content: center;
+    padding: 10px 0px;
+    gap: 15px;
 }
 
 #logo img{
-    width: 100px;
+    width: 80px;
     height: auto;
+}
+
+#logo p{
+    font-size: 6rem;
+    font-family: "Norse-Bold";
 }
 
 
 
 #picture-credits{
     justify-self: flex-end;
+}
+
+#picture-credits a{
+    color: white;
 }
 
 #form-container{
