@@ -1,9 +1,25 @@
-:root{
+:root.light{
     --font-color: rgb(32, 32, 32);
     --bg-color: rgb(247, 247, 247);
     --form-bg-color: white;
     --padding-left: 35px;
     --button-color: rgb(163, 151, 40);
+    --error-color: rgb(207, 39, 39);
+}
+
+:root.dark{
+    --font-color: rgb(255, 255, 255);
+    --bg-color: rgb(32, 32, 32);
+    --form-bg-color: rgb(48, 48, 48);
+    --padding-left: 35px;
+    --button-color: rgb(163, 151, 40);
+    --error-color: rgb(207, 39, 39);
+}
+
+#theme{
+    position: absolute;
+    top: 15px;
+    right: 40px;
 }
 
 @font-face{
@@ -15,7 +31,9 @@
     margin: 0px;
     padding: 0px;
     font-family: Helvetica, Arial, sans-serif;
+    box-sizing: border-box;
 }
+
 
 #content{
     display: flex;
@@ -25,7 +43,7 @@
 
 
 #logo-container{
-    width: max(40vw,280px);
+    width: max(35vw,280px);
     background: center / cover no-repeat url("./images/norse_mountains.jpg");
     display: flex;
     flex-direction: column;
@@ -68,7 +86,7 @@
 
 #form-container{
     flex-shrink: 0;
-    width: max(60vw, 420px);
+    width: max(65vw, 420px);
     color: var(--font-color);
     display: flex;
     flex-direction: column;
@@ -116,6 +134,7 @@
 #form-inputs .row-item{
     display: flex;
     flex-direction: column;
+    position: relative;
 
 }
 
@@ -130,6 +149,32 @@
     width: 275px;
     height: 25px;
     padding-left: 2px;
+    border-radius: 3px;
+    border-style: none;
+    border: 1px solid #E5E7EB;
+    outline: none;
+}
+
+#form-inputs input:focus {
+    border: var(--button-color) solid 1px;
+    box-shadow: 2px 2px 8px -5px;
+}
+
+#form-inputs input:focus:invalid,
+.error {
+    border: var(--error-color) solid 1px;
+}
+
+#form-inputs .row-item .error-msg{
+    position: absolute;
+    top: 45px;
+    left: 2px;
+    color: var(--error-color);
+    font-size: 12px;
+}
+
+input[type=email]:invalid:empty + .error-msg::after{
+    content: '* Incorrect e-mail format';
 }
 
 button{
@@ -140,6 +185,11 @@ button{
     padding: 15px 35px;
     border-radius: 5px;
     border-style: none;
+}
+
+button:hover,
+a:hover{
+    cursor: pointer;
 }
 
 #form-container a{

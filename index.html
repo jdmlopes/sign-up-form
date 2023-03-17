@@ -5,11 +5,16 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
     <title>Sign-up</title>
 </head>
 <body>
     
     <div id="content">
+        <div id="theme">
+            <label for="theme-toggle">Dark Mode</label>
+            <input type="checkbox" id="theme-toggle" name="theme-toggle">
+        </div>
         <div id="logo-container">
             <div id="logo">
                 <img src="./images/odin_logo.png" alt="The Odin Project Logo">
@@ -20,37 +25,43 @@
         <div id="form-container">
             <p class="title-text">This is not a real online service! Create a account to meet the All Father in person, and become the best web developer in Valhalla</p>
             <p class="title-text">What are you waiting for?</p>
-            <form action="#" method="get">
+            <form action="#" method="POST">
                 <div id="form-inputs">
                     <legend>Sign-up!</legend>
                     <div class="row">
                         <div class="row-item">
                             <label for="first-name">FIRST NAME</label>
-                            <input type="text" id="first-name">
+                            <input type="text" id="first-name" name="first-name" required>
+                            
                         </div>
                         <div class="row-item">
                             <label for="last-name">LAST NAME</label>
                             <input type="text" id="last-name" name="last-name">
+                            
                         </div>
                     </div>
                     <div class="row">
                         <div class="row-item">
                             <label for="email">EMAIL</label>
-                            <input type="email" id="email" name="email">
+                            <input type="email" id="email" name="email" required>
+                            
                         </div>
                         <div class="row-item">
                             <label for="phone-number">PHONE NUMBER</label>
-                            <input type="tel" name="phone-number" id="phone-number">
+                            <input type="tel" id="phone-number" name="phone-number">
+                            
                         </div>
                     </div>
                     <div class="row">
                         <div class="row-item">
                             <label for="password">PASSWORD</label>
-                            <input type="password" id="password" name="password">
+                            <input type="password" id="password" name="password" required>
+                            
                         </div>
                         <div class="row-item">
                             <label for="confirm-password">CONFIRM PASSWORD</label>
-                            <input type="password" id="confirm-password" name="confirm-password">
+                            <input type="password" id="confirm-password" name="confirm-password" required>
+                            
                         </div>
                     </div>
                 </div>
